@@ -10,9 +10,9 @@ cd ..
 root_dir="$(pwd)"
 
 cd "$root_dir/src/backend" || exit 1
-# Keeps the executable compatible with the docker container.
+# Keeps the executable compatible with the Docker container.
 export CGO_ENABLED=0
-# Target system for binary is (Alpine) Linux.
+# The target system for the binary is (Alpine) Linux.
 export GOOS=linux
 # These flags further reduce the size of the binary.
 go build -ldflags="-s -w" -o "$root_dir/docker/build-context/backend"
