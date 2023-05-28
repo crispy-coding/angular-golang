@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	disableCORS := len(os.Args) <= 1 || os.Args[1] != "prod"
+	disableCORS := isProductionModeEnabled()
 
 	http.HandleFunc("/api", func(w http.ResponseWriter, r *http.Request) {
 		if disableCORS {
@@ -25,4 +25,8 @@ func main() {
 	if err != nil {
 		fmt.Println("error:", err)
 	}
+}
+
+func isProductionModeEnabled() bool {
+	return len(os.Args) <= 1 || os.Args[1] != "prodMode"
 }

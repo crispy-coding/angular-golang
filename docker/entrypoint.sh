@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/usr/bin/backend prod &
+/usr/bin/backend prodMode &
 BACKEND_PID=$!
 
 nginx -g "daemon off;" &
