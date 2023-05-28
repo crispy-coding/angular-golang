@@ -7,7 +7,7 @@ The goal was to create a code template with:
 * A modern frontend framework like Angular
 * Frontend and backend deployed as single and small docker containers
 
-This project is primarily intended as a template for small to medium sized projects, although it should be easy to transform it into a setup more suitable for larger projects by later splitting it into separate frontend and backend containers.
+This project is primarily intended as a template for small to medium sized projects, although it should be easy to transform it into a setup more suitable for larger projects by splitting it into separate frontend and backend containers.
 
 The size of the resulting docker container is only ~17 MB, consisting of 
 
