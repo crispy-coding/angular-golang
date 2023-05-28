@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	disableCORS := os.Args[1] == "dev"
+	disableCORS := len(os.Args) <= 1 || os.Args[1] != "prod"
+	fmt.Println(disableCORS)
 
 	http.HandleFunc("/api", func(w http.ResponseWriter, r *http.Request) {
 		if disableCORS {
