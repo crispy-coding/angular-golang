@@ -1,17 +1,17 @@
 # angular-golang
 
 ### General
-The goal was to create a code template with:
+The goal was to create a code template using:
 
-* A modern backend language like Golang
-* A modern frontend framework like Angular
-* Frontend and backend deployed as single and small docker containers
+* A modern backend language such as Golang
+* A modern frontend framework such as Angular
+* Frontend and backend deployed as a single, small docker container
 
-This project is primarily intended as a template for small to medium sized projects, although it should be easy to transform it into a setup more suitable for larger projects by splitting it into separate frontend and backend containers.
+This project is primarily intended as a code template for small to medium sized projects, although it should be easy to transform it into a setup more suitable for larger projects by splitting it into separate frontend and backend containers.
 
 The size of the resulting docker container is only ~17 MB, consisting of 
 
-* Slim Nginx Alpine image (11.5 MB)
+* Slim Nginx Alpine Docker base image (11.5 MB)
 * Golang backend (4.5 MB)
 * Angular resources (< 1 MB)
 
@@ -21,13 +21,14 @@ The size of the resulting docker container is only ~17 MB, consisting of
 
 ### Installation Requirements
 
+* Docker
 * Golang 1.20
 * Node.js 18
 * Angular 16
 
 
 
-### Production
+### Production Deployment via Docker
 
 ```bash
 cd docker 
@@ -38,7 +39,7 @@ Visit http://localhost, click on the "Click me" button and you should see a mess
 
 
 
-### Development
+### Development Deployment on Localhost
 
 There are two terminals necessary for the start of the two different processes. In the first terminal, run these commands:
 
