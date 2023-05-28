@@ -1,11 +1,12 @@
 # angular-golang
 
-### General
+## General
+
 The goal was to create a code template using:
 
 * A modern backend language such as Golang
 * A modern frontend framework such as Angular
-* Frontend and backend deployed as a single, small docker container
+* A single, small Docker container image for deployment, containing both frontend and backend applications
 
 This project is primarily intended as a code template for small to medium sized projects, although it should be easy to transform it into a setup more suitable for larger projects by splitting it into separate frontend and backend containers.
 
@@ -23,8 +24,16 @@ The size of the resulting docker container is only ~17 MB, consisting of
 
 * Docker
 * Golang 1.20
-* Node.js 18
+* Node.js 18.10
 * Angular 16
+
+
+
+For the following steps, pull the repository.
+
+```bash
+git clone https://github.com/crispy-coding/angular-golang
+```
 
 
 
@@ -35,7 +44,7 @@ cd docker
 bash build-and-run.sh
 ```
 
-Visit http://localhost, click on the "Click me" button and you should see a message saying "Hello from Golang Backend!".
+Visit http://localhost, click on the "Click me" button and you should see a message saying "Hello from Golang Backend!". Clicking the button triggers a simple HTTP request to the Golang backend, demonstrating the working communication between Nginx and the Golang backend inside the Docker container.
 
 
 
@@ -45,6 +54,7 @@ There are two terminals necessary for the start of the two different processes. 
 
 ```bash
 cd src/frontend
+npm install
 ng serve
 ```
 

@@ -4,10 +4,12 @@ PROJECT_NAME="angular-golang"
 
 docker rm -f "$PROJECT_NAME"
 docker image rm -f "$PROJECT_NAME"
-mkdir -p build-context
 
 cd ..
 root_dir="$(pwd)"
+
+rm -rf "$root_dir/docker/build-context"
+mkdir -p "$root_dir/docker/build-context"
 
 cd "$root_dir/src/backend" || exit 1
 # Keeps the executable compatible with the Docker container.
